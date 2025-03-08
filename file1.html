@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .otp {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+            display: block;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>OTP Generator</h2>
+        <span id="otp" class="otp">------</span>
+        <button onclick="generateOTP()">Generate OTP</button>
+        <button onclick="copyOTP()">Copy OTP</button>
+    </div>
+
+    <script>
+        function generateOTP() {
+            let otp = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("otp").innerText = otp;
+        }
+
+        function copyOTP() {
+            let otpText = document.getElementById("otp").innerText;
+            navigator.clipboard.writeText(otpText).then(() => {
+                alert("OTP Copied: " + otpText);
+            }).catch(() => {
+                alert("Failed to copy OTP");
+            });
+        }
+    </script>
+
+</body>
+
+</html>
