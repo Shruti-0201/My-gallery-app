@@ -1,11 +1,11 @@
 # Title:
   OTP Generator
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Desciption:
+# 📖 Desciption:
   A simple OTP (One-Time Password) generator built using HTML, CSS, and JavaScript. This project generates a random 6-digit OTP when the user clicks the "Generate OTP" button.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Features:
+# 📝 Features:
 
 ✅ Generates a random 4-digit OTP
 ✅ Minimal CSS for styling
