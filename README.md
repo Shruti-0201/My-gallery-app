@@ -1,26 +1,38 @@
-# Title:
-  OTP Generator
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 📖 Desciption:
-  A simple OTP (One-Time Password) generator built using HTML, CSS, and JavaScript. This project generates a random 6-digit OTP when the user clicks the "Generate OTP" button.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 📸 Simple Photo Gallery
 
-# 📝 Features:
+This is a simple web-based photo gallery that fetches **random images from Unsplash** using the Unsplash API. Users can click a button to dynamically load 10 new images into the gallery.
 
-✅ Generates a random 4-digit OTP
-✅ Minimal CSS for styling
-✅ Pure JavaScript-based logic
-✅ Responsive and easy to used
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-# Technologies Used:
+## 🌐 Live Preview
 
-. HTML – Structure of the page
-. CSS – Basic styling
-. JavaScript – OTP generation logic
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Project setup:
- Download or clone the repository.
- Open index.html in any browser.
- Click "Generate OTP" to test the functionality.
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If deployed (e.g., with GitHub Pages), you can add the link here:
+
+[View Live](https://yourusername.github.io/repository-name)
+
+---
+
+## 🧰 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- [Unsplash API](https://unsplash.com/developers)
+
+---
+
+## 🚀 Features
+
+- Load 10 new random images on button click
+- Responsive layout using Flexbox
+- Optimized image loading using the `small` size URL
+- Error handling for API issues
+
+---
+
+## 📦 Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
