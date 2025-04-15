@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Photo Gallery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Photo Gallery</h1>
+    <button onclick="loadImages()">Load Random Images</button>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const accessKey = 'aQO5mNyV_gJTbLS4FK64I-4qzjiyWuhj_WkYdFoY5yQ'; 
+
+        function loadImages() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            fetch(`https://api.unsplash.com/photos/random?count=10&client_id=${accessKey}`)
+                .then(response => response.json())
+                .then(images => {
+                    images.forEach(image => {
+                        const img = document.createElement('img');
+                        img.src = image.urls.small;
+                        gallery.appendChild(img);
+                    });
+                })
+                .catch(err => {
+                    console.error('Error loading images:', err);
+                    alert('Could not load images. Check your API key and internet connection.');
+                });
+        }
+    </script>
+
+</body>
+
+</html>
